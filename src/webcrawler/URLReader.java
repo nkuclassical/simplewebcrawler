@@ -3,10 +3,8 @@ package webcrawler;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,8 +14,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class URLReader {
-	Queue<String> queue = new LinkedList();
-	HashSet<String> set = new HashSet();
+	Queue<String> queue = new LinkedList<String>();
+	HashSet<String> set = new HashSet<String>();
 	Path urlfile;
 
 	public URLReader() {
@@ -93,14 +91,10 @@ public class URLReader {
 		}
 	}
 
-	public void writetoFile(String url) {
-
-	}
 
 	public static void main(String[] args) {
 		URLReader test = new URLReader();
 		String seed = "http://www.amazon.com/";
-
 		test.start(seed);
 	}
 }
